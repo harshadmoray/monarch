@@ -44,7 +44,7 @@
 					</div>
 				</div>
 				<div class="thirdFold section">
-					<video width="100%" height="100%" preload loop autoplay=true>
+					<video id="myVideo" width="100%" height="100%" preload loop autoplay=true>
 					  <source src="http://res.cloudinary.com/monarchcloud/video/upload/q_70/v1508847169/waves_uplidw.webm" type="video/webm">
 					</video>
 					<div class="thirdSecTopWrpr">
@@ -135,6 +135,8 @@
 						$('.projectImage').addClass('projectImageAnim')
 						$('.projectName').addClass('projectNameAnim')
 						$('.projectDescription').addClass('projectDescriptionAnim')
+						var vid = document.getElementById("myVideo"); 
+						vid.play();
 					}
 
 					if(index == 2 && direction == 'down'){
