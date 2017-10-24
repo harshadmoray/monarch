@@ -278,7 +278,16 @@ table {
 }
 
 .thirdFold{
-	background-color: #383838;
+	background-color: #000000;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.thirdSecTopWrpr{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
 }
 
 .projectDescription{
@@ -423,11 +432,12 @@ table {
 }
 
 .rightBottomButton{
-	width: 50%;
 	float: left;
+	width: 40%;
 	box-sizing: border-box;
-	padding: 10%;
-	padding-bottom: 0;
+	padding: 2% 8%;
+	background-color: rgba(0,0,0,0.4);
+	margin-top: 100px;
 }
 
 .whyDisruptDesc{
@@ -651,4 +661,9 @@ table {
 	background-color: #ffffff;
 	color: blue;
 	margin-top: 0px;
+}
+
+video{
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
