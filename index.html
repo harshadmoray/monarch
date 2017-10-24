@@ -44,9 +44,11 @@
 					</div>
 				</div>
 				<div class="thirdFold section">
-					<video id="myVideo" width="100%" height="100%" preload loop autoplay=true>
-					  <source src="http://res.cloudinary.com/monarchcloud/video/upload/q_70/v1508847169/waves_uplidw.webm" type="video/webm">
-					</video>
+					<div class="videoWrpr">
+						<video id="myVideo" width="120%" height="150%" preload loop autoplay=true>
+						  <source src="http://res.cloudinary.com/monarchcloud/video/upload/q_70/v1508847169/waves_uplidw.webm" type="video/webm">
+						</video>
+					</div>
 					<div class="thirdSecTopWrpr">
 						<div class="disruptWrpr cf">
 							<div class="disruptD">D</div>
@@ -141,6 +143,11 @@
 
 					if(index == 2 && direction == 'down'){
 						$('.disruptWrpr').addClass('disruptAnim')
+					}
+
+					if(index == 4 && direction == 'up'){
+						var vid = document.getElementById("myVideo"); 
+						vid.play();
 					}
 				}
 			});

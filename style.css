@@ -663,7 +663,15 @@ table {
 	margin-top: 0px;
 }
 
+.videoWrpr{
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
 video{
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+    margin-top: -10%;
+    margin-left: -10%;
 }
