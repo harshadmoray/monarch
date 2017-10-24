@@ -434,8 +434,9 @@ table {
 .rightBottomButton{
 	float: left;
 	width: 40%;
+	margin-left: 10%;
 	box-sizing: border-box;
-	padding: 2% 8%;
+	padding: 2% 6%;
 	background-color: rgba(0,0,0,0.4);
 	margin-top: 100px;
 }
