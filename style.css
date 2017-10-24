@@ -82,7 +82,7 @@ table {
 }
 
 .firstFold{
-	background-color: blue;
+	background-color: #0058f2;
 	position: relative;
 }
 
@@ -163,7 +163,7 @@ table {
 }
 
 .projectCount{
-	color: blue;
+	color: #0058f2;
 	position: relative;
 	font-size: 1em;
 	font-family: 'Montserrat', sans-serif;
@@ -175,7 +175,7 @@ table {
 	left: 60px;
 	width: 700px;
 	top: 6px;
-	border-top: 1px solid blue;
+	border-top: 1px solid #0058f2;
 	z-index: 99;
 }
 
@@ -258,11 +258,11 @@ table {
 	width: 90%;
 	height: 100%;
 	float: right;
-	background-color: blue;
+	background-color: #0058f2;
 }
 
 .projectName{
-	color: blue;
+	color: #0058f2;
 	font-size: 5.5em;
 	margin-top: 150px;
 	position: relative;
@@ -273,7 +273,7 @@ table {
 	position: absolute;
 	top: 100px;
 	width: 100px;
-	border-top: 1px solid blue;
+	border-top: 1px solid #0058f2;
 	left: 0;
 }
 
@@ -303,8 +303,8 @@ table {
 	width: 120px;
 	padding: 12px;
 	box-sizing: border-box;
-	border: 1px solid blue;
-	color: blue;
+	border: 1px solid #0058f2;
+	color: #0058f2;
 	cursor: pointer;
 	margin-top: 20px;
 	text-align: center;
@@ -335,7 +335,7 @@ table {
 .disruptWrpr div{
 	width: 12.7%;
 	font-size: 6em;
-	color: blue;
+	color: #0058f2;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 800;
 	text-align: center;
@@ -419,7 +419,7 @@ table {
 	font-size: 0.8em;
 	width: 100px;
 	text-align: center;
-	color: rgb(66, 241, 226);
+	color: #00e2b9;
 	border: 1px solid;
 	margin-top: 20px;
 	padding: 12px;
@@ -437,7 +437,7 @@ table {
 	margin-left: 10%;
 	box-sizing: border-box;
 	padding: 2% 6%;
-	background-color: rgba(0,0,0,0.4);
+	/*background-color: rgba(0,0,0,0.4);*/
 	margin-top: 100px;
 }
 
@@ -453,7 +453,7 @@ table {
 
 .sixthFold{
 	position: relative;
-	background-color: blue;
+	background-color: #0058f2;
 }
 
 .sixthFold div{
@@ -517,7 +517,7 @@ table {
 	top: 100px;
 	left: 0;
 	width: 60px;
-	border-top: 1px solid blue;
+	border-top: 1px solid #0058f2;
 }
 
 .digitalDesc{
@@ -530,7 +530,7 @@ table {
 }
 
 .digitalButton{
-	background-color: rgb(66, 241, 226);
+	background-color: #00e2b9;
 	padding: 12px;
 	width: 125px;
 	font-size: 0.8em;
@@ -558,7 +558,7 @@ table {
 
 .blogHeading{
 	font-size: 2.6em;
-	color: blue;
+	color: #0058f2;
 	font-family: 'Playfair Display', serif;
 }
 
@@ -628,7 +628,7 @@ table {
     text-align: center;
     color: #ffffff;
 	font-family: 'Montserrat', sans-serif;
-	background-color: blue;
+	background-color: #0058f2;
 	float: right;
 	font-size: 0.8em;
 	text-align: center;
@@ -660,7 +660,7 @@ table {
 
 .eventsButton{
 	background-color: #ffffff;
-	color: blue;
+	color: #0058f2;
 	margin-top: 0px;
 }
 
@@ -671,8 +671,8 @@ table {
 }
 
 video{
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+	-webkit-filter: grayscale(100%) brightness(30%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) brightness(30%);
     margin-top: -10%;
     margin-left: -10%;
 }
