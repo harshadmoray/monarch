@@ -36,6 +36,12 @@
 						<div class="projectImageBG"></div>
 						<div class="projectImage"></div>
 					</div>
+					<div class="controllerArrowNext">
+						<div class="arrowRight"></div>
+					</div>
+					<div class="controllerArrowBefore">
+						<div class="arrowLeft"></div>
+					</div>
 				</div>
 				<div class="thirdFold section">
 					<div class="disruptWrpr cf">
@@ -100,6 +106,14 @@
 							<div class="blogDesc">Dear Ueno: How do I use After Effects to create motion studies?</div>
 							<div class="blogReadMore">Read more</div>
 						</div>
+						<div class="allPostsButton">ALL POSTS</div>
+					</div>
+				</div>
+				<div class="sixthFold cf section">
+					<div class="sixthTopWrpr cf">
+						<div class="sixthTopTitle">Events</div>
+						<div class="sixthTopBar"></div>
+						<div class="allPostsButton eventsButton">ALL EVENTS</div>
 					</div>
 				</div>
 			</div>
@@ -107,7 +121,22 @@
 	</body>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$('#fullpage').fullpage();
+			$('#fullpage').fullpage({
+				onLeave: function(index, nextIndex, direction){
+					var leavingSection = $(this);
+
+					//after leaving section 2
+					if(index == 1 && direction =='down'){
+						$('.projectImage').addClass('projectImageAnim')
+						$('.projectName').addClass('projectNameAnim')
+						$('.projectDescription').addClass('projectDescriptionAnim')
+					}
+
+					if(index == 2 && direction == 'down'){
+						$('.disruptWrpr').addClass('disruptAnim')
+					}
+				}
+			});
 		});
 	</script>
 </html>

@@ -86,6 +86,51 @@ table {
 	position: relative;
 }
 
+.secondFold{
+	position: relative;
+}
+
+.controllerArrowNext{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 50%;
+	bottom: 5px;
+	cursor: pointer;
+}
+
+.controllerArrowBefore{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	right: 50%;
+	bottom: 5px;
+	cursor: pointer;
+}
+
+.arrowRight{
+	background-image: url('./images/arrow.png');
+	width: 32px;
+	height: 32px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 0;
+	top: 9px;
+}
+
+.arrowLeft{
+	background-image: url('./images/arrow.png');
+	width: 32px;
+	height: 32px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
+	top: 9px;
+	transform: rotate(180deg);	
+}
+
 /*.header{
 	width: 100%;
 	height: 100px;
@@ -145,12 +190,68 @@ table {
 .projectImage{
 	background-image: url('./images/bluePattern.jpg');
 	width: 100%;
-	left: 0;
+	left: 600px;
 	top: 0;
 	height: 90%;
 	background-size: cover;
 	background-position: center;
 	position: absolute;
+}
+
+.projectImageAnim{
+	animation: projectImageEnterAnim 1s ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes projectImageEnterAnim{
+	0%{
+		left: 600px;
+	}
+	100%{
+		left: 0px;
+	}
+}
+
+.projectName{
+	margin-left: -300px;
+}
+
+.projectNameAnim{
+	margin-left: -300px;
+	animation: projectDescAnim 1s ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes projectDescAnim{
+	0%{
+		margin-left: -300px;
+	}
+	100%{
+		margin-left: 0px;
+	}
+}
+
+.projectDescription{
+	opacity: 0;
+	margin-top: 100px;
+}
+
+.projectDescriptionAnim{
+	opacity: 0;
+	margin-top: 100px;
+	animation : projectDescriptionAnimation 1s ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes projectDescriptionAnimation{
+	0%{
+		opacity: 0;
+		margin-top: 100px;
+	}
+	100%{
+		opacity: 1;
+		margin-top: 50px;
+	}
 }
 
 .projectImageBG{
@@ -212,24 +313,84 @@ table {
 }
 
 .disruptWrpr{
-	width: 100%;
+	width: calc(100% - 10%);
 	padding: 10%;
 	box-sizing: border-box;
 	padding-bottom: 5%;
+	position: relative;
+	padding-left: 0.7%;
+	margin: 0 auto;
+	margin-left: 7%;
 }
 
 .disruptWrpr div{
-	float: left;
 	width: 12.7%;
 	font-size: 6em;
 	color: blue;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 800;
 	text-align: center;
-	margin-left: 0.7%;
-	margin-right: 0.7%;
+	position: absolute;
+	top: 20px;
+	transition: all 0.5s ease-in-out;
+	transition-delay: 0.3s;
 }
 
+.disruptAnim>.disruptD{
+	transform: translateY(80px);
+}
+
+.disruptAnim>.disruptI{
+	transform: translateY(10px);
+}
+
+.disruptAnim>.disruptS{
+	transform: translateY(60px);
+}
+
+.disruptAnim>.disruptR{
+	transform: translateY(30px);
+}
+
+.disruptAnim>.disruptU{
+	transform: translateY(120px);
+}
+
+.disruptAnim>.disruptP{
+	transform: translateY(30px);
+}
+
+.disruptAnim>.disruptT{
+	transform: translateY(70px);
+}
+
+.disruptD{
+	left: 0.7%;
+}
+
+.disruptI{
+	left: 13.4%;
+}
+
+.disruptS{
+	left: 26.8%;
+}
+
+.disruptR{
+	left: 40.2%;
+}
+
+.disruptU{
+	left: 53.6%;
+}
+
+.disruptP{
+	left: 67%;
+}
+
+.disruptT{
+	left: 80.4%;
+}
 .leftBottomButton{
 	width: 50%;
 	float: left;
@@ -248,11 +409,17 @@ table {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 0.8em;
 	width: 100px;
-	padding: 7px 12px;
 	text-align: center;
 	color: rgb(66, 241, 226);
 	border: 1px solid;
 	margin-top: 20px;
+	padding: 12px;
+    width: 125px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .rightBottomButton{
@@ -271,6 +438,15 @@ table {
 
 .fourthFold{
 	position: relative;
+}
+
+.sixthFold{
+	position: relative;
+	background-color: blue;
+}
+
+.sixthFold div{
+	vertical-align: top !important;
 }
 
 .digitalLeft{
@@ -315,7 +491,7 @@ table {
 .digitalHeading{
 	margin-top: 40px;
 	color: #ffffff;
-	font-size: 1.6em;
+	font-size: 2.6em;
 	font-family: 'Playfair Display', serif;
 	text-transform: uppercase;
 	position: relative;
@@ -327,7 +503,7 @@ table {
 .digitalHeading::after{
 	content: '';
 	position: absolute;
-	top: 70px;
+	top: 100px;
 	left: 0;
 	width: 60px;
 	border-top: 1px solid blue;
@@ -361,17 +537,16 @@ table {
 	background-color: #ffffff;
 	padding: 50px;
 	box-sizing: border-box;
+	padding-bottom: 0;
 }
 
 .blogLeft{
 	width: 30%;
 	float: left;
-	padding-top: 50px;
-	height: 100vh;
 }
 
 .blogHeading{
-	font-size: 1.8em;
+	font-size: 2.6em;
 	color: blue;
 	font-family: 'Playfair Display', serif;
 }
@@ -389,16 +564,14 @@ table {
 
 .blogRight{
 	width: 70%;
-	padding-top: 50px;
 	background-color: #ffffff;
-	height: 100%;
 	float: left;
 }
 
 .blogPost{
 	width: 100%;
 	height: 150px;
-	border-bottom: 1px solid #383838;
+	border-bottom: 1px solid #eaeaea;
 	position: relative;
 }
 
@@ -432,4 +605,50 @@ table {
 	position: absolute;
 	bottom: 20px;
 	right: 0px;
+}
+
+.allPostsButton{
+	padding: 12px;
+    width: 125px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	background-color: blue;
+	float: right;
+	font-size: 0.8em;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.sixthTopWrpr{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 50px;
+}
+
+.sixthTopTitle{
+	color: #ffffff;
+	font-size: 2.6em;
+	width: 170px;
+	float: left;
+	text-align: left;
+	font-family: 'Playfair Display', serif;
+	text-transform: uppercase;
+}
+
+.sixthTopBar{
+	width: calc(100% - 320px);
+	height: 35px;
+	float: left;
+	border-bottom: 1px solid #ffffff;
+}
+
+.eventsButton{
+	background-color: #ffffff;
+	color: blue;
+	margin-top: 0px;
 }
